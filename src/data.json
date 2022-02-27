@@ -1,0 +1,90 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"client": "2nd Stop books shop",
+			"assignedResources": [
+				{
+					"id": 312,
+					"name": "Jack Myer"
+				},
+				{
+					"id": 22,
+					"name": "Albert Vass"
+				}
+			],
+			"address": "15 mint Street Box Hill"
+		},
+		{
+			"id": 4,
+			"client": "AVG Service Division",
+			"assignedResources": [
+				{
+					"id": 26,
+					"name": "Joel Enright"
+				}
+			],
+			"address": "10 Lord Street Richmond"
+		},
+		{
+			"id": 3,
+			"client": "Yarra Valley Services",
+			"assignedResources": [
+				{
+					"id": 12,
+					"name": "Paul Maxwell"
+				},
+				{
+					"id": 24,
+					"name": "Luke Nitass"
+				}
+			],
+			"address": "120 Burwood Highway Burwood"
+		},
+		{
+			"id": 2,
+			"client": "Sparky Powershop",
+			"assignedResources": [
+				{
+					"id": 18,
+					"name": "Trish Reeve"
+				},
+				{
+					"id": 22,
+					"name": "Albert Vass"
+				}
+			],
+			"address": "12 Maroondah Highway Ringwood"
+		},
+		{
+			"id": 5,
+			"client": "2nd Hand Electricals",
+			"assignedResources": [
+				{
+					"id": 26,
+					"name": "Joel Enright"
+				},
+				{
+					"id": 22,
+					"name": "Albert Vass"
+				}
+			],
+			"address": "26 Maroondah Highway Ringwood"
+		},
+		{
+			"id": 6,
+			"client": "Homeworld",
+			"assignedResources": [
+				{
+					"id": 26,
+					"name": "Joel Enright"
+				},
+				{
+					"id": 312,
+					"name": "Jack Myer"
+				}
+			],
+			"address": "20 Lord Street Richmond"
+		}
+	]
+}
