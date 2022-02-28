@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import data from "../data.json";
+import { removeFromList, addToList } from "../utils/filterFunctions";
 
 import { WrapperCenter } from "../styles/Wrappers.styles";
 import CardComponent from "../components/Card/CardComponent";
@@ -9,26 +10,16 @@ const HomePage = () => {
 	const [toDoList, setToDoList] = useState(data.data);
 	const [todaysTask, setTodaysTask] = useState([]);
 
-	//to add item to todays task
+	//to remove item from todolist and add it to todaystask
 	const handleAddClick = (id) => {
-		//removes item from todolist
-		const filteredToDoList = toDoList.filter((item) => item.id !== id);
-		setToDoList(filteredToDoList);
-		//adds removed item to today's task
-		const todaysTaskList = toDoList.filter((item) => item.id === id);
-		const newList = [...todaysTask, todaysTaskList];
-		setTodaysTask(newList.flat());
+		setToDoList(removeFromList(toDoList, id));
+		setTodaysTask(addToList(toDoList, id, todaysTask));
 	};
 
-	//to remove item from todays task
+	//to remove item from todays task and add it back to todolist
 	const handleRemoveClick = (id) => {
-		//removes item from today's task
-		const filteredList = todaysTask.filter((item) => item.id !== id);
-		setTodaysTask(filteredList);
-		//adds removed item to todolist
-		const newToDoList = todaysTask.filter((item) => item.id === id);
-		const newList = [...toDoList, newToDoList];
-		setToDoList(newList.flat());
+		setTodaysTask(removeFromList(todaysTask, id));
+		setToDoList(addToList(todaysTask, id, toDoList));
 	};
 
 	return (
