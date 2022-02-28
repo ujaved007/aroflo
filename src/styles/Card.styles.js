@@ -5,7 +5,7 @@ export const Card = styled.div`
 	background-color: ${(props) => props.theme.purple};
 	border-radius: 19px;
 	padding: 15px 15px 15px 15px;
-	&.margin-right {
+	&:nth-child(odd) {
 		margin-right: 20px;
 	}
 `;

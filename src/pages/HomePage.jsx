@@ -9,6 +9,7 @@ const HomePage = () => {
 	const [toDoList, setToDoList] = useState(data.data);
 	const [todaysTask, setTodaysTask] = useState([]);
 
+	//to add item to todays task
 	const handleAddClick = (id) => {
 		//removes item from todolist
 		const filteredToDoList = toDoList.filter((item) => item.id !== id);
@@ -19,6 +20,7 @@ const HomePage = () => {
 		setTodaysTask(newList.flat());
 	};
 
+	//to remove item from todays task
 	const handleRemoveClick = (id) => {
 		//removes item from today's task
 		const filteredList = todaysTask.filter((item) => item.id !== id);
